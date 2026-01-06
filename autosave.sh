@@ -4,7 +4,8 @@ AUTOSAVE_APP=$1
 SLEEP_TIME=$2
 while true
 do
-# https://stackoverflow.com/questions/63562111/how-can-i-determine-if-my-kde-desktop-is-in-lock-screen-state-from-command-line
+ # https://stackoverflow.com/questions/63562111/how-can-i-determine-if-my-kde-desktop-is-in-lock-screen-state-from-command-line
+ # is `kdotool` universal?
  ACTIVE_APP=$(kdotool getwindowclassname $(kdotool getactivewindow));
  SCREEN_INFO=$(dbus-send --session --dest=org.freedesktop.ScreenSaver --type=method_call --print-reply /org/freedesktop/ScreenSaver org.freedesktop.ScreenSaver.GetActive
 );
