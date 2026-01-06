@@ -4,7 +4,7 @@ AUTOSAVE_APP=$1
 SLEEP_TIME=$2
 while true
 do
- ACTIVE_APP=$(xdotool getwindowfocus getwindowname);
+ ACTIVE_APP=$(kdotool getwindowclassname $(kdotool getactivewindow));
  SCREEN_INFO=$(xset q);
  TIME=$(date +"%d-%m-%y %T");
  echo -n "${TIME} "
