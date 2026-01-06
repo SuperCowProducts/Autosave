@@ -9,7 +9,7 @@ do
 );
  TIME=$(date +"%d-%m-%y %T");
  echo -n "${TIME} "
- if [[ $SCREEN_INFO == *boolean false* ]];
+ if [[ $SCREEN_INFO == *"boolean false"* ]];
  then
   if [[ $ACTIVE_APP == *$AUTOSAVE_APP* ]];
   then 
