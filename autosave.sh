@@ -13,7 +13,7 @@ do
   if [[ $ACTIVE_APP == *$AUTOSAVE_APP* ]];
   then 
    echo $ACTIVE_APP
-   $(xdotool key ctrl+s);
+   $(sudo keyd do "C-s");
    echo "Autosave successfully"
   else
    echo "Not ${AUTOSAVE_APP}, is ${ACTIVE_APP}"
