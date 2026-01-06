@@ -5,10 +5,11 @@ SLEEP_TIME=$2
 while true
 do
  ACTIVE_APP=$(kdotool getwindowclassname $(kdotool getactivewindow));
- SCREEN_INFO=$(xset q);
+ SCREEN_INFO=$(dbus-send --session --dest=org.freedesktop.ScreenSaver --type=method_call --print-reply /org/freedesktop/ScreenSaver org.freedesktop.ScreenSaver.GetActive
+);
  TIME=$(date +"%d-%m-%y %T");
  echo -n "${TIME} "
- if [[ $SCREEN_INFO == *"Monitor is On"* ]];
+ if [[ $SCREEN_INFO == *boolean false* ]];
  then
   if [[ $ACTIVE_APP == *$AUTOSAVE_APP* ]];
   then 
