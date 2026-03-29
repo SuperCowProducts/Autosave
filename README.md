@@ -7,3 +7,9 @@ Great thanks to @ZiyueWang25 for the original program: I've just updated it to m
 - `keyd`
   - https://github.com/rvaiya/keyd
   - `sudo usermod -aG keyd "$(whoami)"`
+
+# Example run
+
+```
+./autosave.sh org.kde.okular 10s
+```
