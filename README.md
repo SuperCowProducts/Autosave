@@ -11,5 +11,10 @@ Great thanks to @ZiyueWang25 for the original program: I've just updated it to m
 # Example run
 
 ```
-./autosave.sh org.kde.okular 10s
+./autosave.sh org.kde.okular com.vscodium.codium 1
 ```
+Making it run every second is also a good way of checking the app you want to autosave's ID 💡
+
+# Hacking
+
+- `keyd do "C-s"` can be customised, check out what the keys you are pressing's names are with `sudo keyd monitor`
